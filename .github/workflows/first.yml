@@ -26,9 +26,10 @@ jobs:
       - name: npm test
         run: |
           npm test
-          cd ..
         env:
           CI: true
+      - name: comming back
+        run: cd ..
       - name: geting react app
         uses: actions/checkout@v1
         with:
