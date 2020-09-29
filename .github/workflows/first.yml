@@ -10,7 +10,7 @@ jobs:
         node-version: [12]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
         with:
           fetch-depth: 100000
           path: server
@@ -29,7 +29,7 @@ jobs:
         env:
           CI: true
       - name: geting react app
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
           repository: bugdriver/github-ci
           path: react-app
