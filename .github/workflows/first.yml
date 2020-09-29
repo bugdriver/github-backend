@@ -28,13 +28,10 @@ jobs:
           npm test
         env:
           CI: true
-      - name: comming back
-        run: cd ..
       - name: geting react app
         uses: actions/checkout@v1
         with:
           repository: bugdriver/github-ci
-          fetch-depth: 100000
           path: react-app
 
       - name: building react app
