@@ -43,7 +43,9 @@ jobs:
 
       - name: moving build to server
         run: |
-          mv react-app/build ./public
+          ls react-app
+          rm -rf ./public/*
+          cp -r react-app/build/* ./public/*
           rm -rf react-app
           git add .
           git commit -m "added build"
