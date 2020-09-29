@@ -44,13 +44,17 @@ jobs:
       - name: moving build to server
         run: |
           ls react-app
-          mv react-app/build ./public
+          rm -rf ./public/*
+          mv react-app/build/* ./public
           rm -rf react-app
           git config --global user.email "rajat4113@gmail.com"
           git config --global user.name "Rajat"
           git add .
           git commit -m "added build"
-
+      - name: getting current state
+        run: |
+          ls
+          ls public
       - name: Login to Heroku Container
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
