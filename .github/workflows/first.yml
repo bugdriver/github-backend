@@ -29,10 +29,11 @@ jobs:
         env:
           CI: true
       - name: geting react app
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
           repository: bugdriver/github-ci
           path: react-app
+          fetch-depth: 0
 
       - name: building react app
         run: |
