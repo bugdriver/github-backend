@@ -43,6 +43,8 @@ jobs:
 
       - name: moving build to server
         run: |
+          ls
+          pwd
           mv build ../server/public
           cd ../main
           git add .
