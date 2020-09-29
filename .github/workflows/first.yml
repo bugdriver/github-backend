@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
+          repository: bugdriver/github-backend
           fetch-depth: 100000
           path: server
       - name: Use Node.js ${{ matrix.node-version }}
