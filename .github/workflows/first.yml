@@ -44,9 +44,10 @@ jobs:
       - name: moving build to server
         run: |
           ls react-app
-          rm -rf ./public/*
-          cp -r react-app/build/* ./public/
+          mv react-app/build ./public
           rm -rf react-app
+          git config --global user.email "rajat4113@gmail.com"
+          git config --global user.name "Rajat"
           git add .
           git commit -m "added build"
 
